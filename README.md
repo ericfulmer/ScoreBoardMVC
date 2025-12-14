@@ -51,13 +51,3 @@ Make sure the JavaFX SDK version matches your JDK.
 Limitations & Future Improvements
 
 Some limitations remain, such as the lack of data persistence and advanced football features like possession tracking or quarter management. However, the project demonstrates a complete and functional implementation of the MVC design pattern, a JavaFX FXML-based interface, CSS styling, robust input validation, undo functionality, and independent model testing.
-
-If you want, I can also:
-
-Tailor this README to match a class rubric
-
-Add screenshots / GIF placeholders
-
-Create a “How to Use” section for non-technical users
-
-Adjust wording to explicitly defend the two-view (operator + display) design if you’re resubmitting or appealing points
