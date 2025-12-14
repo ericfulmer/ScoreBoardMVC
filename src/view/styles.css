@@ -1,0 +1,60 @@
+.root {
+    -fx-background-color: #500000;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+#homeNameDisplay, #awayNameDisplay {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+#homeScoreLabel, #awayScoreLabel {
+    -fx-font-size: 54px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.radio-button {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.radio-button .radio {
+    -fx-background-color: #ffffff;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #500000;
+}
+
+#lastActionLabel {
+    -fx-font-size: 16px;
+    -fx-text-fill: #d3d3d3;
+    -fx-font-style: italic;
+}
+
+.button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #500000;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 8 15 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+#setNamesButton {
+    -fx-background-color: #3c0000;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #ffffff;
+    -fx-border-radius: 8;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #500000;
+    -fx-prompt-text-fill: #800000;
+}

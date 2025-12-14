@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ScoreboardController">
+    <children>
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <TextField fx:id="homeNameField" promptText="Home Team Name" />
+                <TextField fx:id="awayNameField" promptText="Away Team Name" />
+                <Button fx:id="setNamesButton" onAction="#handleSetNames" text="Set Names" />
+            </children>
+            <padding>
+                <Insets top="20.0" />
+            </padding>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="100.0">
+            <children>
+                <VBox alignment="CENTER">
+                    <Label fx:id="homeNameDisplay" text="HOME" />
+                    <Label fx:id="homeScoreLabel" text="0" />
+                    <RadioButton fx:id="homeRadio" selected="true" text="Target Home">
+                        <toggleGroup>
+                            <ToggleGroup fx:id="teamTargetGroup" />
+                        </toggleGroup>
+                    </RadioButton>
+                </VBox>
+                
+                <ImageView fitWidth="195.0" preserveRatio="true">
+                   <image>
+                      <Image url="@forward-pass-quarterback.gif" />
+                   </image>
+                </ImageView>
+                
+                <VBox alignment="CENTER">
+                    <Label fx:id="awayNameDisplay" text="AWAY" />
+                    <Label fx:id="awayScoreLabel" text="0" />
+                    <RadioButton fx:id="awayRadio" text="Target Away" toggleGroup="$teamTargetGroup" />
+                </VBox>
+            </children>
+        </HBox>
+
+        <Label fx:id="lastActionLabel" style="-fx-font-style: italic;" text="Game Ready" />
+
+        <HBox alignment="CENTER" spacing="15.0">
+            <children>
+                <Button fx:id="tdButton" onAction="#handleScore" text="+6 TD" />
+                <Button fx:id="fgButton" onAction="#handleScore" text="+3 FG" />
+                <Button fx:id="twoButton" onAction="#handleScore" text="+2 SAF/2PT" />
+                <Button fx:id="xpButton" onAction="#handleScore" text="+1 XP" />
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="30.0">
+            <children>
+                <Button fx:id="undoButton" onAction="#handleUndo" text="Undo Last" />
+                <Button fx:id="clearButton" onAction="#handleClear" text="Clear Scores" />
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+    </padding>
+</VBox>
